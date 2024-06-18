@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+</head>
+<body>
+    <h1>Here is where your homepage would be</h1>
+
+    <a href="/auth/register">Register</a>
+    <a href="/auth/login">Login</a>
+    
+    {% if current_user.is_authenticated %}
+        you are logged in
+
+        {{ current_user.email }}
+    {% else %}
+        you are not logged in 
+    {% endif %}
+</body>
+</html>
